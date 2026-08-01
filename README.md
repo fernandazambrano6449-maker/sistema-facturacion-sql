@@ -54,7 +54,5 @@ Esta consulta usa un `JOIN` para conectar clientes con sus facturas, y `GROUP BY
 
 
 
-MongoDB sería una mejor opción en escenarios con datos de estructura variable entre registros (por ejemplo, catálogos de productos con atributos muy distintos entre sí) o donde la prioridad es la velocidad de lectura de documentos completos por encima de consultas relacionales complejas.
-
 
 Fernanda Zambrano — estudiante de Licenciatura en Inteligencia Artificial y Ciencia de Datos
