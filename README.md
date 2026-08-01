@@ -1,6 +1,6 @@
 # Sistema de Facturación — Proyecto Integrador de Bases de Datos
 
-Proyecto que diseña, construye y expone una base de datos relacional para optimizar procesos de contaduría (facturación, inventario y pagos), incluyendo una API sencilla y una justificación de por qué se eligió un modelo relacional sobre uno NoSQL.
+Proyecto que diseña, construye y expone una base de datos relacional para optimizar procesos de contaduría (facturación, inventario y pagos), incluyendo una API.
 
 
 ## Tecnologías usadas
@@ -52,13 +52,7 @@ Esta consulta usa un `JOIN` para conectar clientes con sus facturas, y `GROUP BY
 
 
 
-## MySQL vs MongoDB — ¿por qué relacional?
 
-Para este proyecto se eligió MySQL (relacional) sobre MongoDB (NoSQL) por las siguientes razones:
-
-- **Integridad de datos**: un sistema de facturación necesita que los totales, cantidades y relaciones entre tablas sean siempre consistentes. Las `FOREIGN KEY` de MySQL garantizan que, por ejemplo, no pueda existir una factura sin un cliente válido.
-- **Consultas que cruzan varias entidades**: preguntas como "¿cuánto compró cada cliente?" o "¿qué facturas están pendientes de pago?" requieren cruzar información de varias tablas — el `JOIN` relacional está diseñado exactamente para esto.
-- **Datos con estructura fija y predecible**: una factura siempre tiene los mismos campos (cliente, fecha, total) — no hay necesidad de la flexibilidad de esquema que ofrece MongoDB.
 
 MongoDB sería una mejor opción en escenarios con datos de estructura variable entre registros (por ejemplo, catálogos de productos con atributos muy distintos entre sí) o donde la prioridad es la velocidad de lectura de documentos completos por encima de consultas relacionales complejas.
 
