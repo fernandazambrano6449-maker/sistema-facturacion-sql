@@ -2,15 +2,11 @@
 
 Proyecto que diseña, construye y expone una base de datos relacional para optimizar procesos de contaduría (facturación, inventario y pagos), incluyendo una API sencilla y una justificación de por qué se eligió un modelo relacional sobre uno NoSQL.
 
-## Objetivo
-
-Simular el backend de un sistema de facturación real: desde el diseño de la base de datos hasta una API que expone esos datos, resolviendo preguntas de negocio reales (no solo demostrando sintaxis SQL).
 
 ## Tecnologías usadas
 
 - **MySQL** — base de datos relacional
 - **Python + FastAPI** — API que expone los datos
-- **MongoDB** (comparación conceptual, no implementada) — para justificar la elección del modelo relacional
 
 ## Diseño de la base de datos
 
