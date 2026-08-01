@@ -10,7 +10,7 @@ Proyecto que diseña, construye y expone una base de datos relacional para optim
 
 ## Diseño de la base de datos
 
-El sistema modela el flujo completo de una venta: un cliente compra productos (organizados por categoría), se genera una factura con sus líneas de detalle, y esa factura recibe uno o más pagos (permitiendo pagos parciales).
+El sistema modela el flujo completo de una venta: un cliente compra productos (organizados por categoría), se genera una factura con sus líneas de detalle, y esa factura recibe uno o más pagos.
 
 **Tablas:**
 
@@ -40,8 +40,7 @@ GROUP BY c.cliente_id, c.nombre
 ORDER BY total_comprado DESC;
 ```
 
-Esta consulta usa un `JOIN` para conectar clientes con sus facturas, y `GROUP BY` para resumir el total comprado por cada uno — resolviendo una pregunta real que haría cualquier área de contaduría o ventas.
-
+Esta consulta usa un `JOIN` para conectar clientes con sus facturas, y `GROUP BY` para resumir el total comprado por cada uno.
 ## API
 
 
