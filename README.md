@@ -51,8 +51,4 @@ Esta consulta usa un `JOIN` para conectar clientes con sus facturas, y `GROUP BY
 
 
 
-
-
-
-
 Fernanda Zambrano — estudiante de Licenciatura en Inteligencia Artificial y Ciencia de Datos
