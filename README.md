@@ -49,6 +49,6 @@ Esta consulta usa un `JOIN` para conectar clientes con sus facturas, y `GROUP BY
 | `GET /clientes` | Lista todos los clientes |
 | `GET /productos` | Lista todos los productos con su stock |
 
-
+Una API mínima construida con FastAPI expone los datos vía HTTP: http://localhost:8000/docs
 
 Fernanda Zambrano — estudiante de Licenciatura en Inteligencia Artificial y Ciencia de Datos
