@@ -29,11 +29,9 @@ El sistema modela el flujo completo de una venta: un cliente compra productos (o
 
 **Decisión de diseño clave:** `pagos` es una tabla separada de `facturas` (relación 1 a N), en vez de una sola columna de estatus, para poder representar pagos parciales — un caso real y común en contaduría.
 
-El script completo de creación de tablas y datos de prueba está en [`sql/esquema.sql`](./sql/esquema.sql).
-
 ## Consultas de negocio
 
-Ejemplo de consulta incluida: **¿cuánto ha comprado cada cliente en total?**
+**¿Cuánto ha comprado cada cliente en total?**
 
 ```sql
 SELECT 
@@ -51,22 +49,14 @@ Esta consulta usa un `JOIN` para conectar clientes con sus facturas, y `GROUP BY
 
 ## API
 
-Una API mínima construida con FastAPI expone los datos vía HTTP:
 
 | Endpoint | Descripción |
 |---|---|
 | `GET /clientes` | Lista todos los clientes |
 | `GET /productos` | Lista todos los productos con su stock |
 
-**Cómo correrla:**
 
-```bash
-cd api
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
 
-Luego visita `http://localhost:8000/docs` para ver la documentación interactiva generada automáticamente por FastAPI.
 
 ## MySQL vs MongoDB — ¿por qué relacional?
 
@@ -78,14 +68,5 @@ Para este proyecto se eligió MySQL (relacional) sobre MongoDB (NoSQL) por las s
 
 MongoDB sería una mejor opción en escenarios con datos de estructura variable entre registros (por ejemplo, catálogos de productos con atributos muy distintos entre sí) o donde la prioridad es la velocidad de lectura de documentos completos por encima de consultas relacionales complejas.
 
-## Posibles extensiones futuras
-
-- Trigger que evite ventas cuando el stock sea insuficiente
-- Procedimiento almacenado para consultar productos disponibles por categoría
-- Trigger que recalcule automáticamente el total de una factura al insertar líneas de detalle
-- Tabla `metodos_pago` normalizada (en vez de texto libre)
-- Endpoints adicionales en la API (facturas, detalle de una factura, reportes)
-
-## Autor
 
 Fernanda Zambrano — estudiante de Licenciatura en Inteligencia Artificial y Ciencia de Datos
