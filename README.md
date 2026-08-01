@@ -23,7 +23,6 @@ El sistema modela el flujo completo de una venta: un cliente compra productos (o
 | `detalle_factura` | Líneas de cada factura (qué se compró) |
 | `pagos` | Pagos asociados a una factura (soporta pagos parciales) |
 
-**Decisión de diseño clave:** `pagos` es una tabla separada de `facturas` (relación 1 a N), en vez de una sola columna de estatus, para poder representar pagos parciales — un caso real y común en contaduría.
 
 ## Consultas de negocio
 
